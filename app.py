@@ -146,12 +146,12 @@ def caption_generate(
 
 def download_llama_adapter(instruct_adapter_path, caption_adapter_path):
     if not os.path.exists(instruct_adapter_path):
-        from openxlab.model import download
-        download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_caption_vit_l')
+        os.system(
+            f"wget -q -O {instruct_adapter_path} https://github.com/OpenGVLab/LLaMA-Adapter/releases/download/v.1.0.0/llama_adapter_len10_layer30_release.pth")
 
-if not os.path.exists(caption_adapter_path):
-    from openxlab.model import download
-    download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_release')
+    if not os.path.exists(caption_adapter_path):
+        os.system(
+            f"wget -q -O {caption_adapter_path} https://github.com/OpenGVLab/LLaMA-Adapter/releases/download/v.1.0.0/llama_adapter_len10_layer30_caption_vit_l.pth")
 
 # ckpt_path = "/data1/llma/7B/consolidated.00.pth"
 # param_path = "/data1/llma/7B/params.json"
