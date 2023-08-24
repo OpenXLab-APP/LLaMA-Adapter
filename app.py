@@ -146,7 +146,7 @@ def caption_generate(
 
 def download_llama_adapter(instruct_adapter_path, caption_adapter_path):
     if not os.path.exists(instruct_adapter_path):
-       from openxlab.model import download
+        from openxlab.model import download
         download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_release')
 
     if not os.path.exists(caption_adapter_path):
