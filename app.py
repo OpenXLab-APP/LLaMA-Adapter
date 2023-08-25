@@ -164,8 +164,8 @@ param_path = hf_hub_download(
     repo_id="nyanko7/LLaMA-7B", filename="params.json")
 tokenizer_path = hf_hub_download(
     repo_id="nyanko7/LLaMA-7B", filename="tokenizer.model")
-instruct_adapter_path = "llama_adapter_len10_layer30_release.pth"
-caption_adapter_path = "llama_adapter_len10_layer30_caption_vit_l.pth"
+instruct_adapter_path = "/home/xlab-app-center/llama_adapter_len10_layer30_release.pth"
+caption_adapter_path = "/home/xlab-app-center/llama_adapter_len10_layer30_caption_vit_l.pth"
 max_seq_len = 512
 max_batch_size = 1
 
