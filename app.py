@@ -14,7 +14,7 @@ from fairscale.nn.model_parallel.initialize import initialize_model_parallel
 
 from llama import LLaMA, ModelArgs, Tokenizer, Transformer, VisionModel
 import openxlab
-openxlab.login(ak='9amryewjdd15vkzjbbxq',sk='jnmopxepaqq9w8r1g4ooxd2q70bydv5kw3vdem7z')
+openxlab.login(ak='9amryewjdd15vkzjbbxq',sk='jnmopxepaqq9w8r1g4ooxd2q70bydv5kw3vdem7z',re_login=True)
 from openxlab.model import download
 
 
