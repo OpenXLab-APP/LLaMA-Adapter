@@ -13,10 +13,10 @@ import torch
 from fairscale.nn.model_parallel.initialize import initialize_model_parallel
 
 from llama import LLaMA, ModelArgs, Tokenizer, Transformer, VisionModel
+import openxlab
+openxlab.login(ak=9amryewjdd15vkzjbbxq,sk=jnmopxepaqq9w8r1g4ooxd2q70bydv5kw3vdem7z)
 from openxlab.model import download
-openxlab login
-Access Key: 9amryewjdd15vkzjbbxq 
-Secret Key: jnmopxepaqq9w8r1g4ooxd2q70bydv5kw3vdem7z
+
 
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 
