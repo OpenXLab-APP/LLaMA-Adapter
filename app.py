@@ -144,10 +144,9 @@ def caption_generate(
     print(result)
     return result
 
-
-def download_llama_adapter(instruct_adapter_path, caption_adapter_path):    
-    download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_release.pth')
-    download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_caption_vit_l.pth')
+# download models
+download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_release.pth')
+download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_caption_vit_l.pth')
 
 # ckpt_path = "/data1/llma/7B/consolidated.00.pth"
 # param_path = "/data1/llma/7B/params.json"
@@ -165,8 +164,6 @@ caption_adapter_path = "llama_adapter_len10_layer30_caption_vit_l.pth"
 max_seq_len = 512
 max_batch_size = 1
 
-# download models
-# download_llama_adapter(instruct_adapter_path, caption_adapter_path)
 
 local_rank, world_size = setup_model_parallel()
 if local_rank > 0:
