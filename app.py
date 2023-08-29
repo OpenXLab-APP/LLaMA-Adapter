@@ -152,10 +152,8 @@ download(model_repo='RenRuiZhang/llama_adapter-hf', model_name='llama_adapter_le
 # ckpt_path = "/data1/llma/7B/consolidated.00.pth"
 # param_path = "/data1/llma/7B/params.json"
 # tokenizer_path = "/data1/llma/tokenizer.model"
-ckpt0_path = hf_hub_download(
-    repo_id="csuhan/llama_storage", filename="consolidated.00_part0.pth")
-ckpt1_path = hf_hub_download(
-    repo_id="csuhan/llama_storage", filename="consolidated.00_part1.pth")
+ckpt0_path = download(model_repo='RenRuiZhang/LLaMa-consolidated', model_name='consolidated.00_part0.pth')
+ckpt1_path = download(model_repo='RenRuiZhang/LLaMa-consolidated', model_name='consolidated.00_part1.pth')
 param_path = hf_hub_download(
     repo_id="nyanko7/LLaMA-7B", filename="params.json")
 tokenizer_path = hf_hub_download(
