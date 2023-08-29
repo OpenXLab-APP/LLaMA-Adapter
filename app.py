@@ -13,8 +13,6 @@ import torch
 from fairscale.nn.model_parallel.initialize import initialize_model_parallel
 
 from llama import LLaMA, ModelArgs, Tokenizer, Transformer, VisionModel
-import openxlab
-openxlab.login(ak='9amryewjdd15vkzjbbxq',sk='jnmopxepaqq9w8r1g4ooxd2q70bydv5kw3vdem7z',re_login=True)
 from openxlab.model import download
 
 
@@ -148,8 +146,8 @@ def caption_generate(
     return result
 
 # download models
-download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_release.pth')
-download(model_repo='RenRuiZhang/llama_adapter', model_name='llama_adapter_len10_layer30_caption_vit_l.pth')
+download(model_repo='RenRuiZhang/llama_adapter-hf', model_name='llama_adapter_len10_layer30_caption_vit_l.pth')
+download(model_repo='RenRuiZhang/llama_adapter-hf', model_name='llama_adapter_len10_layer30_release.pth')
 
 # ckpt_path = "/data1/llma/7B/consolidated.00.pth"
 # param_path = "/data1/llma/7B/params.json"
