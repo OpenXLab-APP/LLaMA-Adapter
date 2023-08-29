@@ -146,8 +146,8 @@ def caption_generate(
     return result
 
 # download models
-download(model_repo='RenRuiZhang/llama_adapter-hf', model_name='llama_adapter_len10_layer30_caption_vit_l.pth')
-download(model_repo='RenRuiZhang/llama_adapter-hf', model_name='llama_adapter_len10_layer30_release.pth')
+download(model_repo='RenRuiZhang/LLaMa-Adapter', model_name='llama_adapter_len10_layer30_caption_vit_l.pth')
+download(model_repo='RenRuiZhang/LLaMa-Adapter', model_name='llama_adapter_len10_layer30_release.pth')
 
 # ckpt_path = "/data1/llma/7B/consolidated.00.pth"
 # param_path = "/data1/llma/7B/params.json"
