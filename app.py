@@ -168,6 +168,8 @@ local_rank, world_size = setup_model_parallel()
 if local_rank > 0:
     sys.stdout = open(os.devnull, "w")
 
+print(f'ckpt0_path:{ckpt0_path}, ckpt1_path:{ckpt1_path}, param_path:{param_path}, tokenizer_path:{tokenizer_path}, instruct_adapter_path:{instruct_adapter_path}, caption_adapter_path:{caption_adapter_path}')
+
 generator = load(
     ckpt0_path, ckpt1_path, param_path, tokenizer_path, instruct_adapter_path, caption_adapter_path, local_rank, world_size, max_seq_len, max_batch_size
 )
